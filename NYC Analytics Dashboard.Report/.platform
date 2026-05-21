@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "NYC Analytics Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "15456cb7-1440-8ef7-442f-cc19be4e0169"
+  }
+}

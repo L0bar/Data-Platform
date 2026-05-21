@@ -1,0 +1,213 @@
+{
+  "config": "{\"version\":\"5.73\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU05\",\"type\":2,\"version\":{\"visual\":\"2.9.0\",\"report\":\"3.3.0\",\"page\":\"2.3.1\"}}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU05",
+            "path": "BaseThemes/CY26SU05.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Mobility",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "205fffe219b11d630132",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"97242abd30c2228ec45f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":500,\"width\":1270,\"height\":200,\"z\":3000,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_FactTaxiDaily.PULocationID\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.trip_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"PULocationID\"},\"Name\":\"vw_FactTaxiDaily.PULocationID\",\"NativeReferenceName\":\"PULocationID\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.trip_count)\",\"NativeReferenceName\":\"Sum of trip_count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vw_FactTaxiDaily\"}},\"Property\":\"PULocationID\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"PULocationID\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"PULocationID\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 200.00,
+          "width": 1270.00,
+          "x": 10.00,
+          "y": 500.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"c5ef8ed0b8b1fbada700\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":630,\"height\":280,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.trip_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.trip_count)\",\"NativeReferenceName\":\"Sum of trip_count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 630.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e7f2c8e5ec53eef7dba3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":0,\"z\":1000,\"width\":640,\"height\":280,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.total_fare_usd)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_usd\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.total_fare_usd)\",\"NativeReferenceName\":\"Sum of total_fare_usd\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_usd\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 640.00,
+          "x": 640.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f932cc3cf70f7f095d06\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":290,\"z\":2000,\"width\":1270,\"height\":200,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_TaxiWithAirQuality.full_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.trip_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_TaxiWithAirQuality\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"full_date\"},\"Name\":\"vw_TaxiWithAirQuality.full_date\",\"NativeReferenceName\":\"full_date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0},\"Name\":\"Sum(vw_TaxiWithAirQuality.trip_count)\",\"NativeReferenceName\":\"Sum of trip_count\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"full_date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 200.00,
+          "width": 1270.00,
+          "x": 10.00,
+          "y": 290.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Correlation",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "7a3ac1c949bae936a9a1",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"33fe26d580bbf57c1092\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":236,\"z\":1000,\"width\":1270,\"height\":230,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_TaxiWithAirQuality.full_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.trip_count)\"}],\"Y2\":[{\"queryRef\":\"Avg(vw_TaxiWithAirQuality.pm25_avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_TaxiWithAirQuality\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"full_date\"},\"Name\":\"vw_TaxiWithAirQuality.full_date\",\"NativeReferenceName\":\"full_date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0},\"Name\":\"Sum(vw_TaxiWithAirQuality.trip_count)\",\"NativeReferenceName\":\"Sum of trip_count\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1},\"Name\":\"Avg(vw_TaxiWithAirQuality.pm25_avg)\",\"NativeReferenceName\":\"Average of pm25_avg1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"full_date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 230.00,
+          "width": 1270.00,
+          "x": 10.00,
+          "y": 236.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"4b35fc11e0aedd7b6bd0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":645,\"y\":476.6666666666667,\"z\":3000,\"width\":635,\"height\":230,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.avg_duration_min)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_TaxiWithAirQuality\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"avg_duration_min\"}},\"Function\":1},\"Name\":\"Sum(vw_TaxiWithAirQuality.avg_duration_min)\",\"NativeReferenceName\":\"Average of avg_duration_min\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"avg_duration_min\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 230.00,
+          "width": 635.00,
+          "x": 645.00,
+          "y": 476.67,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"688564e99568ee9f2661\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":1270,\"height\":236,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.pm25_avg)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.trip_count)\"}],\"Category\":[{\"queryRef\":\"vw_TaxiWithAirQuality.full_date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_TaxiWithAirQuality\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1},\"Name\":\"Sum(vw_TaxiWithAirQuality.pm25_avg)\",\"NativeReferenceName\":\"Average of pm25_avg1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0},\"Name\":\"Sum(vw_TaxiWithAirQuality.trip_count)\",\"NativeReferenceName\":\"Sum of trip_count1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"full_date\"},\"Name\":\"vw_TaxiWithAirQuality.full_date\",\"NativeReferenceName\":\"full_date\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 236.00,
+          "width": 1270.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"70f9f44faef0e88b2fd3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":476.6666666666667,\"z\":2000,\"width\":630,\"height\":230,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"vw_TaxiWithAirQuality.day_name\",\"active\":true}],\"Columns\":[{\"queryRef\":\"vw_TaxiWithAirQuality.month_name\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.trip_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_TaxiWithAirQuality\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"day_name\"},\"Name\":\"vw_TaxiWithAirQuality.day_name\",\"NativeReferenceName\":\"day_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"month_name\"},\"Name\":\"vw_TaxiWithAirQuality.month_name\",\"NativeReferenceName\":\"month_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"trip_count\"}},\"Function\":0},\"Name\":\"Sum(vw_TaxiWithAirQuality.trip_count)\",\"NativeReferenceName\":\"Sum of trip_count1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"day_name\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"SelectRef\":{\"ExpressionName\":\"Sum(vw_TaxiWithAirQuality.trip_count)\"}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'maxColor'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"Sum(vw_TaxiWithAirQuality.trip_count)\"}}]}}}",
+          "filters": "[]",
+          "height": 230.00,
+          "width": 630.00,
+          "x": 10.00,
+          "y": 476.67,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Air Quality ",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "92adb7279b6a9c6b3373",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"23c4fc16f627e3e7963d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":464,\"y\":0,\"z\":0,\"width\":464,\"height\":192,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(vw_FactAirQuality.pm25_avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactAirQuality\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1},\"Name\":\"Sum(vw_FactAirQuality.pm25_avg)\",\"NativeReferenceName\":\"Average of pm25_avg\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 192.00,
+          "width": 464.00,
+          "x": 464.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"3e1b1755da74104d3336\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":462,\"width\":1280,\"height\":242,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_TaxiWithAirQuality.month_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_TaxiWithAirQuality.pm25_avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_TaxiWithAirQuality\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"month_name\"},\"Name\":\"vw_TaxiWithAirQuality.month_name\",\"NativeReferenceName\":\"month_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1},\"Name\":\"Sum(vw_TaxiWithAirQuality.pm25_avg)\",\"NativeReferenceName\":\"Average of pm25_avg\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 242.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 462.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5dd532d67e59e34bfbe5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":210,\"z\":1000,\"width\":1280,\"height\":242,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_FactAirQuality.measurement_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_FactAirQuality.pm25_avg)\"},{\"queryRef\":\"Sum(vw_FactAirQuality.no2_avg)\"},{\"queryRef\":\"Sum(vw_FactAirQuality.o3_avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactAirQuality\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"measurement_date\"},\"Name\":\"vw_FactAirQuality.measurement_date\",\"NativeReferenceName\":\"measurement_date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pm25_avg\"}},\"Function\":1},\"Name\":\"Sum(vw_FactAirQuality.pm25_avg)\",\"NativeReferenceName\":\"Average of pm25_avg\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"no2_avg\"}},\"Function\":1},\"Name\":\"Sum(vw_FactAirQuality.no2_avg)\",\"NativeReferenceName\":\"Average of no2_avg\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"o3_avg\"}},\"Function\":1},\"Name\":\"Sum(vw_FactAirQuality.o3_avg)\",\"NativeReferenceName\":\"Average of o3_avg\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"measurement_date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 242.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 210.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Economic",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c4f66f4209b99772cbeb",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"01299a9bfc0391bf8dcd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":630,\"height\":140,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.total_fare_usd)\"},{\"queryRef\":\"Sum(vw_FactTaxiDaily.total_fare_eur)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_usd\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.total_fare_usd)\",\"NativeReferenceName\":\"Sum of total_fare_usd\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_eur\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.total_fare_eur)\",\"NativeReferenceName\":\"Sum of total_fare_eur\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_usd\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 140.00,
+          "width": 630.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"1d40960691e0bf5d29cb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":6.666666666666667,\"y\":325,\"z\":2000,\"width\":1246.6666666666667,\"height\":201.66666666666669,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_FactTaxiDaily.pickup_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.total_fare_usd)\"}],\"Y2\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.total_fare_eur)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pickup_date\"},\"Name\":\"vw_FactTaxiDaily.pickup_date\",\"NativeReferenceName\":\"pickup_date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_usd\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.total_fare_usd)\",\"NativeReferenceName\":\"Sum of total_fare_usd\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"total_fare_eur\"}},\"Function\":0},\"Name\":\"Sum(vw_FactTaxiDaily.total_fare_eur)\",\"NativeReferenceName\":\"Sum of total_fare_eur\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pickup_date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 201.67,
+          "width": 1246.67,
+          "x": 6.67,
+          "y": 325.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"4453964df2cce84d39b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":140,\"z\":1000,\"width\":1250,\"height\":185,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_FactTaxiDaily.pickup_date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_FactTaxiDaily.usd_eur_rate)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactTaxiDaily\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pickup_date\"},\"Name\":\"vw_FactTaxiDaily.pickup_date\",\"NativeReferenceName\":\"pickup_date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"usd_eur_rate\"}},\"Function\":1},\"Name\":\"Sum(vw_FactTaxiDaily.usd_eur_rate)\",\"NativeReferenceName\":\"Average of usd_eur_rate\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"pickup_date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 185.00,
+          "width": 1250.00,
+          "x": 0.00,
+          "y": 140.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c00fc4bddb054950aa76\",\"layouts\":[{\"id\":0,\"position\":{\"x\":630,\"y\":0,\"z\":3000,\"width\":620,\"height\":140,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(vw_FactGDP.gdp_trillion_usd)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactGDP\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"gdp_trillion_usd\"}},\"Function\":4},\"Name\":\"Sum(vw_FactGDP.gdp_trillion_usd)\",\"NativeReferenceName\":\"Max of gdp_trillion_usd\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"gdp_trillion_usd\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"df197ef78ebfb98fda9f\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vw_FactGDP\"}},\"Property\":\"gdp_trillion_usd\"}},\"Function\":4}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"19fddffc0cb5ac0234bc\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vw_FactGDP\"}},\"Property\":\"year\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactGDP\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"year\"}},\"Right\":{\"Literal\":{\"Value\":\"2024L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"ordinal\":1}]",
+          "height": 140.00,
+          "width": 620.00,
+          "x": 630.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"c18f524bf3b707413b0f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7,\"y\":537,\"width\":1247,\"height\":183,\"z\":4000,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vw_FactGDP.year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vw_FactGDP.gdp_trillion_usd)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vw_FactGDP\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"year\"},\"Name\":\"vw_FactGDP.year\",\"NativeReferenceName\":\"year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"gdp_trillion_usd\"}},\"Function\":0},\"Name\":\"Sum(vw_FactGDP.gdp_trillion_usd)\",\"NativeReferenceName\":\"Sum of gdp_trillion_usd1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"gdp_trillion_usd\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 183.00,
+          "width": 1247.00,
+          "x": 7.00,
+          "y": 537.00,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

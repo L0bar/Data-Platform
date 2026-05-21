@@ -1,0 +1,60 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "Binary",
+      "connectionSettings": {
+        "type": "HttpServer",
+        "externalReferences": {
+          "connection": "d5523a6b-320f-4317-a56c-083b61c35591"
+        }
+      }
+    },
+    "destination": {
+      "type": "Binary",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "6dc1a057-9f7c-bb20-4826-6f4ca20c4fee",
+          "rootFolder": "Files"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00",
+      "retry": 0
+    }
+  },
+  "activities": [
+    {
+      "id": "2cb0932a-446b-4982-9ebd-38e268790446",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "HttpServerLocation",
+              "relativeUrl": "/trip-data/yellow_tripdata_2024-02.parquet"
+            }
+          },
+          "storeSettings": {
+            "requestMethod": "GET"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "yellow_tripdata_2024-02.parquet",
+              "folderPath": "nyc_taxi/yellow/yyyy=2024/mm=02"
+            }
+          },
+          "storeSettings": {
+            "copyBehavior": "PreserveHierarchy"
+          }
+        },
+        "enableStaging": false
+      }
+    }
+  ]
+}

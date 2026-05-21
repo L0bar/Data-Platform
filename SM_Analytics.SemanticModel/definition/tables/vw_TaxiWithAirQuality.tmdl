@@ -1,0 +1,217 @@
+table vw_TaxiWithAirQuality
+	lineageTag: 6ef0c260-6dcf-4ae2-bd83-e64cf7aa42e9
+	sourceLineageTag: [dbo].[vw_TaxiWithAirQuality]
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2d4e6423-35cd-4fc9-92fb-a4ccccd5f54b
+		sourceLineageTag: date_key
+		summarizeBy: sum
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 816e750e-b747-4b0f-b9e5-baa8d7d084c5
+		sourceLineageTag: full_date
+		summarizeBy: none
+		sourceColumn: full_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d97dc49f-1141-43bd-ac11-8db095bcaa14
+		sourceLineageTag: year
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d8c3d079-cad9-41b1-8d3a-a6e550ece6bf
+		sourceLineageTag: month
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a140375f-c260-4bd7-b0cd-265f4bfdbddd
+		sourceLineageTag: month_name
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2da073b2-907a-4a64-8418-89cf741fbdd3
+		sourceLineageTag: day_name
+		summarizeBy: none
+		sourceColumn: day_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 7829175c-ed82-45fc-9903-2a92d0213f37
+		sourceLineageTag: is_weekend
+		summarizeBy: none
+		sourceColumn: is_weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7675cf94-3c31-4b46-99d7-796cf28a4325
+		sourceLineageTag: zone_id
+		summarizeBy: sum
+		sourceColumn: zone_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column trip_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: daf57380-fa4b-4a27-a16f-4f930225a732
+		sourceLineageTag: trip_count
+		summarizeBy: sum
+		sourceColumn: trip_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_fare_usd
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e8a2c9ff-0746-47ee-90ea-3327d0b54ddd
+		sourceLineageTag: total_fare_usd
+		summarizeBy: sum
+		sourceColumn: total_fare_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_fare_eur
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6eda6b33-9463-4c99-b6b4-cf13cde6595c
+		sourceLineageTag: total_fare_eur
+		summarizeBy: sum
+		sourceColumn: total_fare_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column usd_eur_rate
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5cf35490-9d29-494c-a44c-03911d390fe8
+		sourceLineageTag: usd_eur_rate
+		summarizeBy: sum
+		sourceColumn: usd_eur_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_duration_min
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 96d077ca-5712-4141-bf1b-ba132b28c3e0
+		sourceLineageTag: avg_duration_min
+		summarizeBy: sum
+		sourceColumn: avg_duration_min
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_distance_mi
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b5be19bf-f8b4-41de-b7dc-1f7bb6c3396a
+		sourceLineageTag: total_distance_mi
+		summarizeBy: sum
+		sourceColumn: total_distance_mi
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pm25_avg
+		dataType: double
+		sourceProviderType: float
+		lineageTag: d0e12a37-d9c8-4616-b23e-f276e52a13d8
+		sourceLineageTag: pm25_avg
+		summarizeBy: sum
+		sourceColumn: pm25_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column no2_avg
+		dataType: double
+		sourceProviderType: float
+		lineageTag: bed011cb-0c30-4944-8210-dff407507193
+		sourceLineageTag: no2_avg
+		summarizeBy: sum
+		sourceColumn: no2_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column o3_avg
+		dataType: double
+		sourceProviderType: float
+		lineageTag: a080f284-4d0b-4f1e-85d5-639199f759d7
+		sourceLineageTag: o3_avg
+		summarizeBy: sum
+		sourceColumn: o3_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aq_sensor_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9c5828f1-c49a-4cc5-91d8-80dbd613de9a
+		sourceLineageTag: aq_sensor_count
+		summarizeBy: sum
+		sourceColumn: aq_sensor_count
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_TaxiWithAirQuality = entity
+		mode: directLake
+		source
+			entityName: vw_TaxiWithAirQuality
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

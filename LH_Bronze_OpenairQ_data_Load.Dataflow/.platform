@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "LH_Bronze_OpenairQ_data_Load"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "28a60704-5b03-9318-4acb-68bd568048df"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "Binary",
+      "connectionSettings": {
+        "type": "HttpServer",
+        "externalReferences": {
+          "connection": "32ff42a6-5348-43f2-b237-790c67e262da"
+        }
+      }
+    },
+    "destination": {
+      "type": "Binary",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "6dc1a057-9f7c-bb20-4826-6f4ca20c4fee",
+          "rootFolder": "Files"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00",
+      "retry": 0
+    }
+  },
+  "activities": [
+    {
+      "id": "454c6a2f-5dd3-4543-81f4-bf8fc92b9650",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "HttpServerLocation",
+              "relativeUrl": "/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata"
+            }
+          },
+          "storeSettings": {
+            "requestMethod": "GET"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "euro_usd_daily.csv",
+              "folderPath": "exchange_rate_euro_usd"
+            }
+          },
+          "storeSettings": {
+            "copyBehavior": "PreserveHierarchy"
+          }
+        },
+        "enableStaging": false
+      }
+    }
+  ]
+}

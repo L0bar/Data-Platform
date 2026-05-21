@@ -1,0 +1,117 @@
+table vw_FactTaxiDaily
+	lineageTag: b2802b75-d156-447a-b403-c860127728c8
+	sourceLineageTag: [dbo].[vw_FactTaxiDaily]
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc9709f9-0e96-493b-89b3-b9f679455469
+		sourceLineageTag: date_key
+		summarizeBy: sum
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column pickup_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8bef1373-69b8-46af-b414-f31e0da96e66
+		sourceLineageTag: pickup_date
+		summarizeBy: none
+		sourceColumn: pickup_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column PULocationID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f83167e2-974f-49b8-80eb-b1277d2ed9cb
+		sourceLineageTag: PULocationID
+		summarizeBy: count
+		sourceColumn: PULocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column trip_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 341b92e6-18c5-4e90-9b45-a1422ed16546
+		sourceLineageTag: trip_count
+		summarizeBy: sum
+		sourceColumn: trip_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_fare_usd
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 39c5b64f-adda-45cf-9061-701ed7636b58
+		sourceLineageTag: total_fare_usd
+		summarizeBy: sum
+		sourceColumn: total_fare_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_fare_eur
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 9eb9b06b-e8ed-4e6a-80d5-0b27dadbe5ee
+		sourceLineageTag: total_fare_eur
+		summarizeBy: sum
+		sourceColumn: total_fare_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column usd_eur_rate
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 23247750-fa96-43ba-8c32-e9be670a6134
+		sourceLineageTag: usd_eur_rate
+		summarizeBy: sum
+		sourceColumn: usd_eur_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_duration_min
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7ab93bee-3bc3-4cbe-8dea-d7e0cb0fdd4b
+		sourceLineageTag: avg_duration_min
+		summarizeBy: sum
+		sourceColumn: avg_duration_min
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_distance_mi
+		dataType: double
+		sourceProviderType: float
+		lineageTag: eb495a55-0718-4d39-9d4b-2c4824bea66e
+		sourceLineageTag: total_distance_mi
+		summarizeBy: sum
+		sourceColumn: total_distance_mi
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vw_FactTaxiDaily = entity
+		mode: directLake
+		source
+			entityName: vw_FactTaxiDaily
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

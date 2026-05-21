@@ -1,0 +1,4 @@
+-- Auto Generated (Do not modify) DF56A8130B602B365E2DDE6914D7EE7BC050A70920F4C741DD6454AB7955F069
+CREATE VIEW dbo.vw_FactAirQuality AS
+SELECT *
+FROM [LH_Gold].[dbo].[factairqualitydaily];

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "LH_Bronze_OpenairQ_data_Load",
+  "queryGroups": [],
+  "documentLocale": "en-GB",
+  "queriesMetadata": {
+    "openaq_measurements_raw": {
+      "queryId": "a465985d-23a9-4a8d-b691-1746e30624e4",
+      "queryName": "openaq_measurements_raw",
+      "loadEnabled": false
+    },
+    "DefaultDestination": {
+      "queryId": "126cf66a-a21a-41eb-9d4c-407821a15d22",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"ef02737a-f2ee-46c5-b680-fe01b78aee0b\",\"DatasourceId\":\"59b27b89-44cd-4710-b786-a046641a20c8\"}"
+    },
+    {
+      "path": "https://api.openaq.org/",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"ef02737a-f2ee-46c5-b680-fe01b78aee0b\",\"DatasourceId\":\"81b2dca5-1af7-4395-932e-91680b139710\"}"
+    }
+  ],
+  "fastCombine": true
+}

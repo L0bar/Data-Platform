@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_Transform_Bronze_Taxi_Datas_Load_To_SIlver"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e3ea7388-cf50-b251-46dc-81a6849b41c6"
+  }
+}

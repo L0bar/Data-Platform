@@ -1,0 +1,4 @@
+-- Auto Generated (Do not modify) 9EA45B1C181F10640F0D828861A7224FAF8CBF8C02D74DD2DAF544DF93ABAEDF
+CREATE VIEW dbo.vw_FactTaxiDaily AS
+SELECT *
+FROM [LH_Gold].[dbo].[facttaxidaily];

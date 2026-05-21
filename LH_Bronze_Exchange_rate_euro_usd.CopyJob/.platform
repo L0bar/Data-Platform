@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "CopyJob",
+    "displayName": "LH_Bronze_Exchange_rate_euro_usd"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c27abf55-57ee-8e38-4cf7-c28bfd35bf7e"
+  }
+}

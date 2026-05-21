@@ -1,0 +1,82 @@
+table vw_FactAirQuality
+	lineageTag: cb31165e-2479-4045-b075-e65513ab6915
+	sourceLineageTag: [dbo].[vw_FactAirQuality]
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e3f7cd8a-707a-4be1-855a-c0608510aa70
+		sourceLineageTag: date_key
+		summarizeBy: sum
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column measurement_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 76673942-a1bf-4ef2-8026-b66313eaaaa0
+		sourceLineageTag: measurement_date
+		summarizeBy: none
+		sourceColumn: measurement_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column pm25_avg
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 15ef6a5c-96c4-45c7-9c0c-8aadee468b6f
+		sourceLineageTag: pm25_avg
+		summarizeBy: sum
+		sourceColumn: pm25_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column no2_avg
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e9138a4c-d70b-4c6d-b8df-0fe570e29f5b
+		sourceLineageTag: no2_avg
+		summarizeBy: sum
+		sourceColumn: no2_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column o3_avg
+		dataType: double
+		sourceProviderType: float
+		lineageTag: a9678c73-8651-43a7-88b4-e004ec5f01fd
+		sourceLineageTag: o3_avg
+		summarizeBy: sum
+		sourceColumn: o3_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sensor_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0e1677ab-3aa2-44e5-ba99-36d0e895528c
+		sourceLineageTag: sensor_count
+		summarizeBy: sum
+		sourceColumn: sensor_count
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_FactAirQuality = entity
+		mode: directLake
+		source
+			entityName: vw_FactAirQuality
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
